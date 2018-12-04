@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script>
+
+        function findRepeatList() {                                              // Написать функцию, которая находит в тексте повторябельные слова
+
+            var count = 0;
+            var arr = txt.split(/[\s,\.\-]+/);                                   // Преобразование строки в массив + регулярные выражение
+                                                                                
+            for (var i = 0; i < arr.length; i++) {                               // Перебор элементов
+                for (var j = i + 1; j < arr.length + 1; j++) {                   // Сравнения по индексам
+                    if (arr[i] == arr[j]) {                                      // Условие , если есть совпадения, вывод на экран
+                        count++;                                                 // Счетчик
+                        document.write(count + "&nbsp" + arr[i] + "<br/>");
+                    }
+                }
+            }
+        }
+
+
+        var txt = "I want to catch that little mouse, - says the hungry cat, cat sits down and begins to cry mew, mew...";
+
+        findRepeatList(txt);                                                     // Вызов функции
+
+    </script>
+</head>
+<body>
+</body>
+</html>
